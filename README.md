@@ -1,96 +1,70 @@
-# 💧 IoT-Based Water Level Monitoring and Pump Control
+# 💧 Smart Water Level Monitoring and Pump Control
 
-### 📘 Overview
-This project monitors the water level in a tank using an **HC-SR04 ultrasonic sensor** and automatically controls a **12V DC pump** through a **relay module**. The system uses **NodeMCU ESP8266** and the **Blynk IoT platform** for real-time monitoring and control from a mobile app.
-
----
-
-### ⚙️ Components Used
-- NodeMCU ESP8266
-- HC-SR04 Ultrasonic Sensor
-- 5V Dual Channel Relay Module (with Optocoupler)
-- 12V DC Water Pump
-- 12V Power Supply
-- Blynk App (for IoT control)
+### 📘 Overview  
+This project monitors the water level in a tank using an **HC-SR04 ultrasonic sensor** and automatically controls a **12 V DC pump** through a **relay module**. The system runs on a **NodeMCU ESP8266** with the **Blynk IoT platform**, enabling real-time monitoring and remote control via smartphone.
 
 ---
 
-### 🧠 Working Principle
-1. HC-SR04 measures distance from water surface.  
-2. NodeMCU converts distance to percentage level.  
-3. Sends data to **Blynk Cloud** for display.  
-4. Controls relay automatically (auto mode) or via app (manual mode).
+### ⚙️ Components Used  
+- NodeMCU ESP8266  
+- HC-SR04 Ultrasonic Sensor  
+- 5 V Dual-Channel Relay Module (with Optocoupler)  
+- 12 V DC Water Pump  
+- 12 V Power Supply  
+- Jumper Wires and Breadboard
 
 ---
 
-### 📱 Blynk Virtual Pins
-| Virtual Pin | Function |
-|--------------|-----------|
-| V0 | Water Level Gauge (%) |
-| V1 | Pump Control Button |
-| V2 | Pump Status LED |
-| V3 | Auto/Manual Mode Switch |
+### 🧠 Working Principle  
+1. The HC-SR04 emits an ultrasonic pulse via TRIG from the NodeMCU.  
+2. The echo is received and the NodeMCU measures the time duration → converts to distance in cm.  
+3. The distance is mapped to a percentage level (0 % = empty, 100 % = full) based on the calibrated min/max distances.  
+4. In **Auto mode**, if water level falls below a threshold (e.g., 20 %), the pump is turned ON; when it rises above a higher threshold (e.g., 80 %), the pump is turned OFF.  
+5. In **Manual mode**, the user can control the pump via the Blynk button. The pump status LED reflects whether the pump is running.
 
 ---
 
-### 🧩 Circuit Diagram
-![Circuit Diagram](circuit_diagram/circuit_diagram.png)
+### 📱 Blynk Setup (Virtual Pins)  
+| Virtual Pin | Widget       | Function                        |
+|-------------|--------------|----------------------------------|
+| V0          | Gauge        | Displays water level (%)         |
+| V1          | Button       | Manual pump ON/OFF control       |
+| V2          | LED          | Shows pump status (ON = lit)     |
+| V3          | Switch       | Toggle Auto / Manual mode        |
+
 
 ---
 
-### 🎥 Demonstration
-Add your video link here:  
-👉 [Demo Video](# 💧 IoT-Based Water Level Monitoring and Pump Control
-
-### 📘 Overview
-This project monitors the water level in a tank using an **HC-SR04 ultrasonic sensor** and automatically controls a **12V DC pump** through a **relay module**. The system uses **NodeMCU ESP8266** and the **Blynk IoT platform** for real-time monitoring and control from a mobile app.
+### 📂 Circuit Diagram & Block Diagram  
+![Circuit Diagram](circuit_diagram/circuit_diagram.png)  
+![Block Diagram](circuit_diagram/block_diagram.png)
 
 ---
 
-### ⚙️ Components Used
-- NodeMCU ESP8266
-- HC-SR04 Ultrasonic Sensor
-- 5V Dual Channel Relay Module (with Optocoupler)
-- 12V DC Water Pump
-- 12V Power Supply
-- Blynk App (for IoT control)
+### 🎥 Project Demonstration  
+[![Watch the Demo Video](https://img.youtube.com/vi/1mVJVF7FysNmHoguVx9TnmTg_7pHMOXsj/0.jpg)](https://drive.google.com/file/d/1mVJVF7FysNmHoguVx9TnmTg_7pHMOXsj/view?usp=drive_link)
 
 ---
 
-### 🧠 Working Principle
-1. HC-SR04 measures distance from water surface.  
-2. NodeMCU converts distance to percentage level.  
-3. Sends data to **Blynk Cloud** for display.  
-4. Controls relay automatically (auto mode) or via app (manual mode).
+### 🧑‍💻 Source Code  
+The Arduino sketch is available in `code/water_level_control.ino`.
 
 ---
 
-### 📱 Blynk Virtual Pins
-| Virtual Pin | Function |
-|--------------|-----------|
-| V0 | Water Level Gauge (%) |
-| V1 | Pump Control Button |
-| V2 | Pump Status LED |
-| V3 | Auto/Manual Mode Switch |
+### 🧾 Report  
+A detailed project report (PDF) is available in `documentation/project_report.pdf`.
 
 ---
 
-### 🧩 Circuit Diagram
-![Circuit Diagram](Circuit Diagram.jpeg)
 
 ---
 
-### 🎥 Demonstration
- video link here:https://drive.google.com/file/d/1mVJVF7FysNmHoguVx9TnmTg_7pHMOXsj/view?usp=drive_link  
-👉 [Demo Video]([https://drive.google.com](https://drive.google.com/file/d/1mVJVF7FysNmHoguVx9TnmTg_7pHMOXsj/view?usp=drive_link))
-
----
-
-### 🧑‍💻 Developed By
+### 🎉 Developer  
 **Name:** Jerome Punnoose  
-**Platform:** Arduino IDE + Blynk  
+**Platform:** Arduino IDE + NodeMCU + Blynk  
 **Year:** 2025
-)
 
 ---
+
+Thank you for visiting! Feel free to explore the code, diagrams, and live demo.  
 
