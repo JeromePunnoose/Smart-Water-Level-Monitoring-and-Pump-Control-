@@ -11,8 +11,8 @@
 #define RELAY_PIN D4
 
 // ---- WiFi credentials ----
-char ssid[] = "TITTY_BSNL_FIBRE";
-char pass[] = "titty3575";
+char ssid[] = "";
+char pass[] = "";
 
 // ---- Global variables ----
 long duration;
