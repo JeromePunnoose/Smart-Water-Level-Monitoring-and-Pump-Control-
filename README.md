@@ -76,7 +76,7 @@ This project monitors the water level in a tank using an **HC-SR04 ultrasonic se
 ---
 
 ### 🧩 Circuit Diagram
-![Circuit Diagram](circuit_diagram/circuit_diagram.png)
+![Circuit Diagram](Circuit Diagram.jpeg)
 
 ---
 
