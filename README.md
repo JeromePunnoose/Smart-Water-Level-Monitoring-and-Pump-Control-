@@ -36,7 +36,7 @@ This project monitors the water level in a tank using an **HC-SR04 ultrasonic se
 ---
 
 ### 📂 Circuit Diagram & Block Diagram  
-![Circuit Diagram]([circuit_diagram/circuit_diagram.png](https://github.com/JeromePunnoose/Smart-Water-Level-Monitoring-and-Pump-Control-/blob/f839f9eca70d657e0669b6e009f69a8d3affdd94/Circuit%20Diagram.jpeg))   
+([Circuit Diagram.png](https://github.com/JeromePunnoose/Smart-Water-Level-Monitoring-and-Pump-Control-/blob/f839f9eca70d657e0669b6e009f69a8d3affdd94/Circuit%20Diagram.jpeg))   
 ([Block Diagram.png](https://github.com/JeromePunnoose/Smart-Water-Level-Monitoring-and-Pump-Control-/blob/fe7aee960c46aa4045717afc9d49d9a96d570527/Block%20Diagram.png))
 
 ---
